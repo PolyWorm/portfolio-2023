@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#191919;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="81.82" width="18.18" height="18.18" transform="translate(181.82 18.18) rotate(180)"/><rect class="cls-1" x="81.82" y="27.27" width="18.18" height="45.45" transform="translate(181.82 100) rotate(180)"/><polygon class="cls-1" points="72.73 0 72.73 81.82 100 81.82 100 100 72.73 100 54.55 100 54.55 0 72.73 0"/><polygon class="cls-1" points="27.27 0 0 0 0 18.18 27.27 18.18 27.27 81.82 18.18 81.82 18.18 27.27 0 27.27 0 81.82 0 100 27.27 100 45.45 100 45.45 0 27.27 0"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffffff; /* Changed to white */
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect class="cls-1" x="81.82" width="18.18" height="18.18" transform="translate(181.82 18.18) rotate(180)" />
+      <rect class="cls-1" x="81.82" y="27.27" width="18.18" height="45.45" transform="translate(181.82 100) rotate(180)" />
+      <polygon class="cls-1" points="72.73 0 72.73 81.82 100 81.82 100 100 72.73 100 54.55 100 54.55 0 72.73 0" />
+      <polygon class="cls-1" points="27.27 0 0 0 0 18.18 27.27 18.18 27.27 81.82 18.18 81.82 18.18 27.27 0 27.27 0 81.82 0 100 27.27 100 45.45 100 45.45 0 27.27 0" />
+    </g>
+  </g>
+</svg>

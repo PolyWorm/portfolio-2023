@@ -2,6 +2,19 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: hsla(0, 0%, 6%, 1);
+  background-image: radial-gradient(
+      at 55% 1%,
+      hsla(4, 56%, 19%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 42% 38%, hsla(185, 56%, 19%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 47%, hsla(197, 56%, 19%, 1) 0px, transparent 50%),
+    radial-gradient(at 39% 22%, hsla(181, 56%, 19%, 1) 0px, transparent 50%),
+    radial-gradient(at 90% 28%, hsla(41, 56%, 19%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 60%, hsla(165, 56%, 19%, 1) 0px, transparent 50%),
+    radial-gradient(at 65% 96%, hsla(121, 56%, 19%, 1) 0px, transparent 50%);
+  color: white;
 }
 
 .App-header {
@@ -12,6 +25,7 @@
   padding-left: 100px;
   padding-right: 100px;
 }
+
 .App-main {
   padding-left: 100px;
   padding-right: 100px;
@@ -31,7 +45,7 @@
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -43,19 +57,13 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  background-color: hsla(0, 0%, 94%, 1);
-  background-image: radial-gradient(
-      at 5% 7%,
-      hsla(230, 100%, 81%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 56% 39%, hsla(110, 100%, 81%, 1) 0px, transparent 50%),
-    radial-gradient(at 26% 59%, hsla(350, 100%, 81%, 1) 0px, transparent 50%);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(11.2px);
+  -webkit-backdrop-filter: blur(11.2px);
 }
+
 .text-container {
   width: 70%;
   height: 70%;
@@ -87,67 +95,63 @@
 .project {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0px;
   flex: 1;
   width: 100%;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 40px 40px 0px 40px;
   transition: box-shadow 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .project:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
-
 .project-1 {
   /* From https://css.glass */
-  background: rgba(128, 128, 128, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.2px);
   -webkit-backdrop-filter: blur(8.2px);
   font-size: 24px; /* larger text size */
   font-family: "Courier New", Courier, monospace; /* use Courier font */
-  color: rgb(36, 36, 36);
 }
 
 .project-description {
   font-size: 15px;
   margin-top: 5px;
-  text-align: center;
 }
 
 .project-header {
   font-size: 20px; /* smaller text size */
   margin: 0px;
-  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 .project-2 {
   /* From https://css.glass */
-  background: rgba(128, 128, 128, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.2px);
   -webkit-backdrop-filter: blur(8.2px);
   font-size: 24px; /* larger text size */
   font-family: "Courier New", Courier, monospace; /* use Courier font */
-  color: rgb(36, 36, 36);/* change text color to white for better contrast */
 }
 
 .project-3 {
   /* From https://css.glass */
-
-  background: rgba(128, 128, 128, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.2px);
   -webkit-backdrop-filter: blur(8.2px);
   font-size: 24px; /* larger text size */
   font-family: "Courier New", Courier, monospace; /* use Courier font */
-  color: rgb(36, 36, 36);
 }
 .contact {
   background-color: #191919;
@@ -175,4 +179,3 @@
   display: flex;
   gap: 10px;
 }
-
