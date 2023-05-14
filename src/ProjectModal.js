@@ -7,15 +7,15 @@ function ProjectModal({ project, onClose }) {
             <button onClick={onClose}></button>
             <div className="content">
                 {project === "Bello Coffee Kiosk" && (
-                    <iframe className="video" width="280" height="500" src="https://www.youtube.com/embed/Ng3cTGPhpoI" frameborder="0" allowfullscreen></iframe>
+                    <iframe className="video" width="500" height="500" src="https://www.youtube.com/embed/X92IzAf8UVM?autoplay=1&modestbranding=1&rel=0&fs=0&color=white&controls=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
 
                 )}
                 {project === "Hueshift.li" && (
-                    <iframe className="video" width="280" height="500" src="https://www.youtube.com/embed/5TSvISC2QEs" frameborder="0" allowfullscreen></iframe>
+                    <iframe className="video" width="305" height="500" src="https://www.youtube.com/embed/5TSvISC2QEs?autoplay=1&modestbranding=1&rel=0&fs=0&color=white&controls=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
 
                 )}
                 {project === "Nonadox" && (
-                    <iframe className="video" width="280" height="500" src="https://www.youtube.com/embed/Ng3cTGPhpoI" frameborder="0" allowfullscreen></iframe>
+                    <iframe className="video" width="280" height="500" src="https://www.youtube.com/embed/Ng3cTGPhpoI?autoplay=1&modestbranding=1&rel=0&fs=0&color=white&controls=0&disablekb=1" frameborder="0" allowfullscreen></iframe>
 
                 )}
                 <div className="description">

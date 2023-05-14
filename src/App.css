@@ -2,18 +2,11 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: hsla(0, 0%, 6%, 1);
-  background-image: radial-gradient(
-      at 55% 1%,
-      hsla(4, 56%, 19%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 42% 38%, hsla(185, 56%, 19%, 1) 0px, transparent 50%),
-    radial-gradient(at 11% 47%, hsla(197, 56%, 19%, 1) 0px, transparent 50%),
-    radial-gradient(at 39% 22%, hsla(181, 56%, 19%, 1) 0px, transparent 50%),
-    radial-gradient(at 90% 28%, hsla(41, 56%, 19%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 60%, hsla(165, 56%, 19%, 1) 0px, transparent 50%),
-    radial-gradient(at 65% 96%, hsla(121, 56%, 19%, 1) 0px, transparent 50%);
+  background-color:hsla(0,0%,7%,1);
+  background-image:
+  radial-gradient(at 11% 55%, hsla(235,50%,23%,1) 0px, transparent 50%),
+  radial-gradient(at 42% 29%, hsla(130,50%,23%,1) 0px, transparent 50%),
+  radial-gradient(at 5% 3%, hsla(0,50%,23%,1) 0px, transparent 50%);
   color: white;
 }
 
@@ -65,8 +58,10 @@
 }
 
 .text-container {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+  box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
   display: flex;
   flex-direction: column;
@@ -80,7 +75,9 @@
 }
 
 .description-container p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .projects-container {
@@ -88,7 +85,7 @@
   flex-direction: column;
   height: 550px;
   border-radius: 40px;
-  flex: 4;
+  flex: 3;
   gap: 20px;
 }
 
