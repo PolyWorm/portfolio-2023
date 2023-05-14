@@ -22,9 +22,10 @@ function App() {
       <header className="App-header">
         <img src={logo} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
         <div className="nav-links">
-          <a href="#">Resume</a>
 
-          <a href="#">Contact</a>
+          <a href="/resume.pdf" target="_blank">Resume</a>
+
+          <a href="mailto:j.l@berkeley.edu">Contact</a>
         </div>
       </header>
       <main className="App-main">
