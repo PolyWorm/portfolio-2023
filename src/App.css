@@ -10,6 +10,7 @@
   color: white;
 }
 
+
 .App-header {
   display: flex;
   justify-content: space-between;
@@ -175,4 +176,36 @@
 .infobar {
   display: flex;
   gap: 10px;
+}
+@media (max-width: 768px) {
+  .App-header, .App-main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .App-main {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+
+  .text-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .description-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .description-container p, .project-description {
+    font-size: 1.2rem;
+  }
+
+  .project {
+    padding: 20px 20px 0px 20px;
+  }
+
+  .project-1, .project-2, .project-3 {
+    font-size: 1.2em;
+  }
 }
