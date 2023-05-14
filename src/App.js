@@ -14,6 +14,9 @@ function App() {
   const handleClick = () => {
     window.location.href = 'mailto:j.l@berkeley.edu';
   };
+  function handleLinkedInClick() {
+    window.open('https://www.linkedin.com/in/justin-l-300464123/', '_blank');
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -34,7 +37,9 @@ function App() {
               <button onClick={handleClick} className="contact">
                 <strong>Contact me</strong>
               </button>
-              <button class="linkedin-button"><img src={linkedin} alt="linkedin" style={{ width: '17px', height: '17px', }} /></button>
+              <button className="linkedin-button" onClick={handleLinkedInClick}>
+                <img src={linkedin} alt="linkedin" style={{ width: '17px', height: '17px', }} />
+              </button>
             </div>
           </div>
         </div>
