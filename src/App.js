@@ -23,7 +23,7 @@ function App() {
         <img src={logo} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
         <div className="nav-links">
 
-          <a href="/resume.pdf" target="_blank">Resume</a>
+          <a href="/resume.docx.pdf" target="_blank">Resume</a>
 
           <a href="mailto:j.l@berkeley.edu">Contact</a>
         </div>
