@@ -58,7 +58,7 @@ function App() {
         <div className="description-container">
           <div className="text-container">
             <p>
-              <strong>Hello, I'm Justin Li.</strong> It seems you've landed on my website. My goal is to turn interesting ideas into enjoyable experiences. You can find some of my projects here
+              <strong>Welcome! I'm Justin Li,</strong>  a recent cognitive science graduate diving into the world of software development. With a particular appreciation for design and user experiences, I hope my work resonates with you. Enjoy your visit. :0
             </p>
             <div className="infobar">
               <button onClick={handleClick} className="contact">
