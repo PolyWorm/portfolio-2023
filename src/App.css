@@ -1,15 +1,50 @@
+:root {
+  --color-bg: #222;
+  --color-text: white;
+}
+
+[data-theme="light"] {
+  --color-bg: white;
+  --color-text: #222;
+}
+
+/* Repeat for all elements and adjust as necessary */
+
 .App {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color:hsla(0,0%,7%,1);
-  background-image:
-  radial-gradient(at 11% 55%, hsla(235,50%,23%,1) 0px, transparent 50%),
-  radial-gradient(at 42% 29%, hsla(130,50%,23%,1) 0px, transparent 50%),
-  radial-gradient(at 5% 3%, hsla(0,50%,23%,1) 0px, transparent 50%);
-  color: white;
+  color: var(--color-text);
 }
 
+.background {
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.theme-toggle {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  color: var(--color-text);
+  margin-left: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold; /* Make the text bold */
+  background-color: transparent; /* Make the background transparent */
+}
+
+
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
 
 .App-header {
   display: flex;
@@ -39,7 +74,7 @@
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
   font-weight: bold;
 }
 
@@ -103,7 +138,7 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  color: rgb(255, 255, 255);
+  color: var(--color-text);
   cursor: pointer;
 }
 

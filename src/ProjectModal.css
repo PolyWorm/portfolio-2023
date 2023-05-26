@@ -1,3 +1,12 @@
+:root {
+  --color-bg: #222;
+  --color-text: white;
+}
+
+[data-theme="light"] {
+  --color-bg: white;
+  --color-text: #222;
+}
 .project-modal {
   position: fixed;
   top: 0;
@@ -28,26 +37,22 @@
 
 .project-modal button {
   position: absolute;
-  top: 20px;
+  top: 5px;
   right: 20px;
-  font-size: 24px;
-  background: none;
+  font-size: 48px;
   border: none;
-  color: white;
+  color: var(--color-text);
+  background: transparent;
   cursor: pointer;
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace
 }
 
-.project-modal button:before {
-  content: "×";
-  font-size: 48px;
-}
+
 
 .project-modal h1 {
   margin: 0;
   font-size: 40px;
   text-align: left;
-  color: white;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -62,7 +67,6 @@
   flex: 1;
   font-size: 24px;
   text-align: left;
-  color: white;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -73,7 +77,6 @@
 }
 .description a {
   text-decoration: underline;
-  color: white;
   font-weight: bold;
 }
 .content {

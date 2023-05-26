@@ -4,7 +4,7 @@ import React from 'react';
 function ProjectModal({ project, onClose }) {
     return (
         <div className="project-modal">
-            <button onClick={onClose}></button>
+            <button onClick={onClose} className="close">x</button>
             <div className="content">
                 {project === "Bello Coffee Kiosk" && (
                     <iframe className="video" width="500" height="500" src="https://www.youtube.com/embed/X92IzAf8UVM?autoplay=1&modestbranding=1&rel=0&fs=0&color=white&controls=0&disablekb=1" frameborder="0" allowfullscreen></iframe>

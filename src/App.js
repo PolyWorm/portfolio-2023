@@ -1,32 +1,52 @@
 import React from 'react';
 import './App.css';
 import ProjectModal from './ProjectModal';
+import BackgroundAnimation from './BackgroundAnimation';
 
-
-// Import your logo image
-import logo from './assets/jli2.svg';
+import logoDark from './assets/jli2_dark.svg';
+import logoLight from './assets/jli2_light.svg';
 import linkedin from './assets/linkedin.svg';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = React.useState(true);
   const [showModal, setShowModal] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState(null);
   const handleCloseModal = () => setShowModal(false);
+  const handleThemeChange = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'light' : 'dark');
+  };
   const handleClick = () => {
     window.location.href = 'mailto:j.l@berkeley.edu';
   };
   function handleLinkedInClick() {
     window.open('https://www.linkedin.com/in/justin-l-300464123/', '_blank');
   }
+  function handleResumeClick() {
+    window.open('/resume.docx.pdf', '_blank');
+  }
   return (
     <div className="App">
+      <div className="background">
+        <BackgroundAnimation /> {/* Add this line */}
+      </div>
       <header className="App-header">
-        <img src={logo} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
+        <img src={isDarkMode ? logoDark : logoLight} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
         <div className="nav-links">
+          <button onClick={handleThemeChange} className="theme-toggle">
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
 
-          <a href="/resume.docx.pdf" target="_blank">Resume</a>
+          <button onClick={handleResumeClick} className="theme-toggle">
+            Resume
+          </button>
+          <button onClick={handleClick} className="theme-toggle">
+            Contact
+          </button>
 
-          <a href="mailto:j.l@berkeley.edu">Contact</a>
+
         </div>
+
       </header>
       <main className="App-main">
         <div className="description-container">
