@@ -29,12 +29,15 @@ function App() {
   return (
     <div className="App">
       <div className="background">
-        
+
         <BackgroundAnimation /> {/* Add this line */}
-        
+
       </div>
       <header className="App-header">
-        <img src={isDarkMode ? logoDark : logoLight} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
+        <a href="https://www.imjustin.li"  rel="noopener noreferrer">
+          <img src={isDarkMode ? logoDark : logoLight} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
+        </a>
+
         <div className="nav-links">
           <button onClick={handleThemeChange} className="theme-toggle">
             {isDarkMode ? '☀️' : '🌙'}

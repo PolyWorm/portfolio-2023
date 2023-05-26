@@ -30,11 +30,11 @@
 
 .theme-toggle {
   font-family: "Courier New", Courier, monospace;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-text);
-  margin-left: 20px;
+  margin-left: 50px;
   border: none;
-  padding: 10px;
+  padding: 0px;
   cursor: pointer;
   font-weight: bold; /* Make the text bold */
   background-color: transparent; /* Make the background transparent */
