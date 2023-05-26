@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-function BackgroundAnimation() {
+function RollingBallsAnimation() {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -12,27 +12,18 @@ function BackgroundAnimation() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    const bubbles = [];
+    const balls = [];
 
-    // Color Palette
-    const colors = [
-      new THREE.Color(0,255/255,159/255),
-      new THREE.Color(0,184/255,255/255),
-      new THREE.Color(0,30/255,255/255),
-      new THREE.Color(189/255,0,255/255),
-      new THREE.Color(214/255,0,255/255),
-    ];
-
-    // Get a random color from the palette
-    const randomColorFromPalette = () => {
-      const index = Math.floor(Math.random() * colors.length);
-      return colors[index];
+    const randomPastelColor = () => {
+      const base = new THREE.Color(Math.random(), Math.random(), Math.random());
+      base.offsetHSL(0.5, 0.6, 0.1);
+      return base;
     };
 
     for (let i = 0; i < 50; i++) {
       const geometry = new THREE.SphereGeometry(0.5, 100, 100);
-      const colorA = randomColorFromPalette();
-      const colorB = randomColorFromPalette();
+      const colorA = randomPastelColor();
+      const colorB = randomPastelColor();
       const uniforms = {
         colorB: { type: 'vec3', value: colorB },
         colorA: { type: 'vec3', value: colorA },
@@ -57,11 +48,11 @@ function BackgroundAnimation() {
         transparent: true,
         opacity: 0.1,
       });
-      const sphere = new THREE.Mesh(geometry, material);
-      sphere.position.set(Math.random() * 10 - 5, Math.random() * -10 - 1, Math.random() * 10 - 5);
-      sphere.velocity = Math.random();
-      bubbles.push(sphere);
-      scene.add(sphere);
+      const ball = new THREE.Mesh(geometry, material);
+      ball.position.set(Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5);
+      ball.velocity = new THREE.Vector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5);
+      balls.push(ball);
+      scene.add(ball);
     }
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
@@ -75,10 +66,16 @@ function BackgroundAnimation() {
 
     const animate = function () {
       requestAnimationFrame(animate);
-      bubbles.forEach((bubble) => {
-        bubble.position.y += bubble.velocity / 100;
-        if (bubble.position.y > 10) {
-          bubble.position.y = -10;
+      balls.forEach((ball) => {
+        ball.position.add(ball.velocity.clone().multiplyScalar(0.01));
+        if (Math.abs(ball.position.x) > 5) {
+          ball.velocity.x *= -1;
+        }
+        if (Math.abs(ball.position.y) > 5) {
+          ball.velocity.y *= -1;
+        }
+        if (Math.abs(ball.position.z) > 5) {
+          ball.velocity.z *= -1;
         }
       });
       renderer.render(scene, camera);
@@ -102,4 +99,4 @@ function BackgroundAnimation() {
   return <div ref={mountRef} />;
 }
 
-export default BackgroundAnimation;
+export default RollingBallsAnimation;

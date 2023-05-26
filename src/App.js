@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ProjectModal from './ProjectModal';
 import BackgroundAnimation from './BackgroundAnimation';
+import RollingBallsAnimation from './RollingBallsAnimation';
 
 import logoDark from './assets/jli2_dark.svg';
 import logoLight from './assets/jli2_light.svg';
@@ -28,7 +29,9 @@ function App() {
   return (
     <div className="App">
       <div className="background">
+        
         <BackgroundAnimation /> {/* Add this line */}
+        
       </div>
       <header className="App-header">
         <img src={isDarkMode ? logoDark : logoLight} alt="Logo" className="logo" style={{ width: '30px', height: '30px' }} />
