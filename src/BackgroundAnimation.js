@@ -36,6 +36,7 @@ function BackgroundAnimation() {
       const uniforms = {
         colorB: { type: 'vec3', value: colorB },
         colorA: { type: 'vec3', value: colorA },
+        opacity: { type: 'f', value: 0.5 } // adding opacity uniform here
       };
       const material = new THREE.ShaderMaterial({
         vertexShader: `
@@ -49,13 +50,13 @@ function BackgroundAnimation() {
           uniform vec3 colorA; 
           uniform vec3 colorB; 
           varying vec3 vUv;
+          uniform float opacity; // accessing opacity uniform here
 
           void main() {
-            gl_FragColor = vec4(mix(colorA, colorB, vUv.z), 1.0);
+            gl_FragColor = vec4(mix(colorA, colorB, vUv.z), opacity); // apply opacity to gl_FragColor
           }`,
         uniforms,
         transparent: true,
-        opacity: 0.1,
       });
       const sphere = new THREE.Mesh(geometry, material);
       sphere.position.set(Math.random() * 10 - 5, Math.random() * -10 - 1, Math.random() * 10 - 5);
