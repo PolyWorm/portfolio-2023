@@ -43,7 +43,7 @@ function ProjectModal({ project, onClose }) {
                     {project === "Nonadox" && (
                         <p>
 
-                            Nonadox was a puzzle game with 32 meticulously designed levels that challenged players to match lights with the corresponding outer ring on each square. The game had a three by three grid with the same mechanics on each level, but with different arrangements of the board, obstacles such as walls and pits, and increasingly difficult challenges. Players were ranked based on the number of moves used to complete each level, with the goal being to use as few moves as possible for a higher score.
+                            Nonadox was a puzzle game with 32 meticulously designed levels that challenged players to match lights with the corresponding outer ring on each square. The game had a three by three grid with the same mechanics on each level, but with different arrangements of the board and increasingly difficult challenges. Players were ranked based on the number of moves used to complete each level, with the goal being to use as few moves as possible for a higher score.
                             <br /><br />The game required strategic thinking and efficient planning, making it a fun and unique puzzle game experience.
                             To create Nonadox, I utilized a range of technologies, including Xcode, SpriteKit, Ableton for music, and Photoshop and Illustrator for graphics. I coded the game in Swift, and I created the music and graphics myself. As a solo project, Nonadox allowed me to showcase my creativity and programming skills in every aspect of the game's development, from level design to sound and visual effects.
                             <br /><br />
